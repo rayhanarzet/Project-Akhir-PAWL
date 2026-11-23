@@ -2,6 +2,11 @@
 @section('title', 'Profil saya')
 @section('content')
 
+@php
+    $initials = collect(preg_split('/\s+/u', trim(auth()->user()->name), -1, PREG_SPLIT_NO_EMPTY))
+        ->take(2)->map(fn ($part) => mb_strtoupper(mb_substr($part, 0, 1)))->implode('');
+@endphp
+
 <x-back-button :fallback="route('user.dashboard')" label="Kembali ke Dashboard" />
 
 <header class="mb-8 anim-fade-up">
