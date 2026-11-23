@@ -8,7 +8,7 @@
     <div class="absolute top-1/2 -right-32 w-[32rem] h-[32rem] bg-soft rounded-full blur-3xl pointer-events-none -z-10"></div>
 
     <!-- Hero Card Utama (Kontras & Berkelas) -->
-    <section class="bg-gradient-to-br from-white via-soft/40 to-soft/80 border border-line rounded-[28px] overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 lg:p-14 shadow-[0_12px_32px_rgba(24,63,50,0.06)] relative group">
+    <section class="bg-gradient-to-br from-white via-soft/40 to-soft/80 border border-line rounded-container overflow-visible grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 lg:p-14 shadow-[0_12px_32px_rgba(24,63,50,0.06)] relative group">
         <!-- Floating Subtle Pattern Accent -->
         <div class="absolute inset-0 bg-eco-pattern opacity-40 pointer-events-none"></div>
 
@@ -70,10 +70,10 @@
         <!-- Kolom Kanan: Interactive Visual Showcase -->
         <div class="lg:col-span-5 relative flex items-center justify-center">
             <!-- Decorative Back Glow -->
-            <div class="absolute inset-4 bg-gradient-to-tr from-lime/40 to-forest/20 rounded-[32px] blur-xl -z-10 group-hover:blur-2xl transition-all"></div>
+            <div class="absolute inset-4 bg-gradient-to-tr from-lime/40 to-forest/20 rounded-container blur-xl -z-10 group-hover:blur-2xl transition-all"></div>
 
             <!-- Main Visual Container -->
-            <div class="w-full max-w-sm rounded-[28px] overflow-hidden border-2 border-white bg-white shadow-[0_16px_36px_rgba(24,63,50,0.12)] relative transition-transform duration-500 hover:scale-[1.03]">
+            <div class="w-full max-w-sm rounded-container overflow-hidden border-2 border-white bg-white shadow-[0_16px_36px_rgba(24,63,50,0.12)] relative transition-transform duration-500 hover:scale-[1.03]">
                 <img class="w-full h-72 object-cover" src="{{ asset('images/komunitas.png') }}" alt="Ilustrasi mahasiswa peduli lingkungan">
                 <div class="p-4 bg-white/90 backdrop-blur border-t border-line flex items-center justify-between">
                     <div class="flex items-center gap-2.5">
@@ -96,8 +96,8 @@
                 </div>
             </div>
 
-            <!-- Floating Motion Badge 2: Bottom Left (First Step) -->
-            <div class="absolute -bottom-4 -left-2 sm:-left-4 bg-white/95 backdrop-blur border border-line rounded-2xl px-4 py-2.5 shadow-lg flex items-center gap-2.5 animate-float-delayed z-20">
+            <!-- Floating Motion Badge 2: Mid-Left Illustration Area (First Step) -->
+            <div class="absolute bottom-24 -left-3 sm:-left-6 bg-white/95 backdrop-blur border border-line rounded-2xl px-4 py-2.5 shadow-lg flex items-center gap-2.5 animate-float-delayed z-20">
                 <span class="text-2xl" aria-hidden="true">🌿</span>
                 <div>
                     <span class="text-label font-bold text-ink block leading-none">First Step</span>
@@ -161,7 +161,7 @@
     </section>
 
     <!-- Section Preview Misi Populer -->
-    <section class="mt-16 bg-white border border-line rounded-[28px] p-8 lg:p-10 shadow-[0_8px_24px_rgba(38,62,48,0.04)]">
+    <section class="mt-16 bg-white border border-line rounded-container p-8 lg:p-10 shadow-[0_8px_24px_rgba(38,62,48,0.04)]">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div>
                 <span class="text-caption font-bold text-forest uppercase tracking-wider">Katalog Awal</span>

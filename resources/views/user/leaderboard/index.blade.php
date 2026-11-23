@@ -23,7 +23,7 @@
                 @php $isMe = $user->id === auth()->id(); @endphp
                 <tr class="transition-all duration-150 row-anim
                            {{ $isMe ? 'bg-lime/20 font-semibold' : 'hover:bg-soft/60 hover:translate-x-0.5' }}"
-                    style="animation-delay: {{ $loop->index * 0.05 }}s">
+                    style="animation-delay: {{ $loop->index * 0.05 }}">
                     <td class="px-6 py-4 font-bold">
                         @if($loop->index === 0)
                             <span class="text-xl">🥇</span>

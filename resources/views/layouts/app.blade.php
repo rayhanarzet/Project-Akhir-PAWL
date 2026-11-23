@@ -72,7 +72,7 @@
     <!-- Public Header (Guest) -->
     <header class="h-20 bg-white border-b border-line px-6 lg:px-12 flex items-center justify-between">
         <a class="inline-flex items-center" href="{{ route('landing') }}">
-            <img src="{{ asset('images/logo.png') }}" alt="Plogee" class="h-16 w-auto object-contain">
+            <img src="{{ asset('images/logo.png') }}" alt="Plogee" class="h-12 w-auto object-contain">
         </a>
         <nav class="flex items-center gap-4">
             <a href="{{ route('login') }}" class="text-label text-forest hover:text-forest-hover px-4 py-2">Masuk</a>
