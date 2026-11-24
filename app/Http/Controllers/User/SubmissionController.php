@@ -55,15 +55,15 @@ class SubmissionController
 
                 $photos = $participant->draft_photos ?? [];
                 if ($request->hasFile('photos')) {
-                    $obsolete = array_column($photos, 'path');
                     $photos = [];
                     foreach ($request->file('photos') as $file) {
-                        $path = $file->store('evidence/'.$participant->id, 'local');
-                        if (!$path) {
-                            throw new RuntimeException('Foto gagal disimpan.');
-                        }
-                        $newPaths[] = $path;
-                        $photos[] = ['path' => $path, 'name' => mb_substr($file->getClientOriginalName(), 0, 180)];
+                        $mime = $file->getMimeType();
+                        $base64 = base64_encode(file_get_contents($file->getRealPath()));
+                        $dataUri = 'data:' . $mime . ';base64,' . $base64;
+                        $photos[] = [
+                            'path' => $dataUri,
+                            'name' => mb_substr($file->getClientOriginalName(), 0, 180)
+                        ];
                     }
                 }
 
@@ -89,10 +89,8 @@ class SubmissionController
                 $participant->save();
             });
         } catch (Throwable $error) {
-            Storage::disk('local')->delete($newPaths);
             throw $error;
         }
-        Storage::disk('local')->delete($obsolete);
         if ($draft) {
             return to_route('user.my-missions')->with('notice', 'Draf bukti berhasil disimpan.');
         }

@@ -17,7 +17,7 @@ class StoreSubmissionRequest extends FormRequest
         return [
             'description' => [$draft ? 'nullable' : 'required', 'string', 'max:3000'],
             'photos' => ['sometimes', 'array', 'min:1', 'max:3'],
-            'photos.*' => ['required', 'file', 'image', 'mimes:jpg,jpeg,png', 'max:5120'],
+            'photos.*' => ['required', 'file', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
             'ownership' => $draft ? ['nullable', 'boolean'] : ['accepted'],
         ];
     }
